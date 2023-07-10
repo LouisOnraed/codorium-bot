@@ -1,0 +1,23 @@
+{
+  "name": "codorium---bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LouisOnraed/codorium-bot.git"
+  },
+  "author": "Louis Onraed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LouisOnraed/codorium-bot/issues"
+  },
+  "homepage": "https://github.com/LouisOnraed/codorium-bot#readme",
+  "dependencies": {
+    "discord.js": "13.6.0",
+    "dotenv": "16.0.0"
+  }
+}
