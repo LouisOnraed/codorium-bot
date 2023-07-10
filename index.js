@@ -5,6 +5,7 @@ dotenv.config();
 const client = new Client({ intents: 3276799 });
 
 client.once('ready', () => {
+    console.log('####################################');
     console.log('Je suis prêt !');
 });
 
