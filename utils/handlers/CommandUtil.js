@@ -6,7 +6,7 @@ module.exports = async client => {
     (await pGlob(`${process.cwd()}/commands/*/*.js`)).map(async commandFile => {
         const cmd = require(commandFile);
 
-        if(!cmd.name || !cmd.description) return console.log(`------\nCommande non-chargée: pas de nom et/ou de description)\nFichier -> ${commandFile}\n------`)
+        if(!cmd.name || (!cmd.description && cmd.type != 'USER')) return console.log(`------\nCommande non-chargée: pas de nom et/ou de description)\nFichier -> ${commandFile}\n------`)
 
         client.commands.set(cmd.name, cmd);
 

@@ -24,7 +24,7 @@ module.exports = {
             required: false,
         }
     ],
-    async runSlash(client, interaction) {
+    async runInteraction(client, interaction) {
         const pollTitle = interaction.options.getString('titre');
         const pollContent = interaction.options.getString('question');
         const pollImage = interaction.options.getString('image');

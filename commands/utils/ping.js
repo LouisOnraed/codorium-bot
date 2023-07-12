@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
     name: 'ping',
     description: 'Commande ping!',
-    runSlash(client, interaction) {
+    runInteraction(client, interaction) {
         const embed = new MessageEmbed()
             .setTitle('🏓 Pong !')
             .setThumbnail(client.user.displayAvatarURL())
