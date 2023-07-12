@@ -1,13 +1,13 @@
 const { MessageEmbed } = require('discord.js')
 
 module.exports = {
-    name: 'sondage',
-    description: 'Faire un sondage',
+    name: 'oui-non',
+    description: 'Faire une question avec les réponses Oui et Non',
     
     options: [
         {
             name: 'titre',
-            description: 'Quelle est le titre de votre sondage ?',
+            description: 'Quelle est le titre de votre question ?',
             type: 'STRING',
             required: true,
         },
@@ -27,7 +27,7 @@ module.exports = {
             .setColor('#00a3b5')
             .setDescription(pollContent)
             .setTimestamp()
-            .setFooter({ text: `Nouveau sondage généré par ${interaction.user.tag}!` })
+            .setFooter({ text: `Sondage par ${interaction.user.tag}!` })
 
         const poll = await interaction.reply({ embeds: [embed], fetchReply: true });
         poll.react('✅');
