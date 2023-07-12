@@ -2,6 +2,8 @@ module.exports = {
     name: 'ready',
     once: true,
     async execute(client) {
+        const StartBotChannel = client.channels.cache.get(process.env.CHANNEL_START_BOT);
+        StartBotChannel.send('Je suis de nouveau en ligne avec sûrement des corrections de bug et des nouvelles fonctionnalités !');
         console.log('####################################');
         console.log('Je suis prêt !');
 

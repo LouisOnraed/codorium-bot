@@ -5,7 +5,13 @@ module.exports = {
     once: false,
     execute(client, message) {
         if(message.author.bot) return;
-        if(!message.content.startsWith(prefix)) return;
+        if(!message.content.startsWith(prefix)){
+            if(message.content.startsWith('Salut') || message.content.startsWith('Bonjour') || message.content.startsWith('Bienvenue')){
+                message.react('👋');
+            } else{
+                return;
+            }
+        };
 
         const args = message.content.slice(prefix.length).trim().split(/ + /g);
         const cmdName = args.shift().toLowerCase();
