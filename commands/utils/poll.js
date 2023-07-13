@@ -2,6 +2,7 @@ const { MessageEmbed } = require('discord.js')
 
 module.exports = {
     name: 'oui-non',
+    permissions: ['ADMINISTRATOR'],
     description: 'Faire une question avec les réponses Oui et Non',
     
     options: [
